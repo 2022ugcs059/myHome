@@ -36,8 +36,10 @@ app.use((err, req, res, next) => {
     });
 });
 // Connect to MongoDB and then start the server
+
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
+    console.log(process.env.MONGO_URL)
     console.log("Connected to MongoDB");
     app.listen(3000, () => {
       console.log("App is listening on port 3000.");
