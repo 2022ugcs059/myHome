@@ -6,12 +6,24 @@ import authRouter from '../api/routes/auth.route.js';
 import listingRouter from '../api/routes/listing.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import cors from "cors"
 dotenv.config();
 
 const app = express();
 
 const __dirname = path.resolve();
-
+app.use(
+  cors({
+    origin: [
+      "https://main--padhlo.netlify.app",
+      "http://localhost:5173",
+      "https://frontend-padhlo.onrender.com",
+      "https://padhlo.netlify.app",
+      "https://frontend-padhlo.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use(cookieParser());
