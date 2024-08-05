@@ -20,6 +20,7 @@ app.use(
       "https://frontend-padhlo.onrender.com",
       "https://padhlo.netlify.app",
       "https://frontend-padhlo.vercel.app",
+      "https://my-home-ufnz.vercel.app"
     ],
     credentials: true,
   })
