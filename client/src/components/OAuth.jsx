@@ -17,7 +17,7 @@ export default function OAuth() {
             const result = await signInWithPopup(auth, provider);
 
             // Example of fetching additional user data from your API
-            const res = await fetch('/api/auth/google', {
+            const res = await fetch('https://myhome-yjwx.onrender.com/api/auth/google', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
